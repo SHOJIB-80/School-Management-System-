@@ -7,6 +7,5 @@ public class Main {
 
         System.out.println(" the value of x is " +x);
         System.out.println("the value of C is "+C);
-         System.out.println("the value of C is "+C);
     }
 }
