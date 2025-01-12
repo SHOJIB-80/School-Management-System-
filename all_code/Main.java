@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-// Main Class
 public class SchoolManagementSystem {
     private static final Scanner scanner = new Scanner(System.in);
     private static final ArrayList<Student> students = new ArrayList<>();
@@ -57,14 +56,13 @@ public class SchoolManagementSystem {
         } while (choice != 4);
     }
 
-    // Initialize some default users
     private static void initializeUsers() {
         users.put("admin", new User("admin", "password", "admin"));
         users.put("teacher1", new User("teacher1", "password", "teacher"));
         users.put("student1", new User("student1", "password", "student"));
     }
 
-    // User login
+    
     private static void login() {
         System.out.println("\n=== Login ===");
         System.out.print("Username: ");
@@ -81,7 +79,7 @@ public class SchoolManagementSystem {
         }
     }
 
-    // Manage Students
+
     private static void manageStudents() {
         int choice;
         do {
@@ -123,7 +121,7 @@ public class SchoolManagementSystem {
         }
     }
 
-    // Manage Teachers
+ 
     private static void manageTeachers() {
         int choice;
         do {
@@ -164,7 +162,7 @@ public class SchoolManagementSystem {
         }
     }
 
-    // Manage Courses
+    
     private static void manageCourses() {
         int choice;
         do {
@@ -243,7 +241,7 @@ public class SchoolManagementSystem {
         }
     }
 
-    // View Assigned Courses (For Teachers)
+   
     private static void viewAssignedCourses() {
         System.out.println("\n=== Your Assigned Courses ===");
         for (Course course : courses) {
@@ -253,7 +251,7 @@ public class SchoolManagementSystem {
         }
     }
 
-    // View Enrolled Courses (For Students)
+   
     private static void viewEnrolledCourses() {
         System.out.println("\n=== Your Enrolled Courses ===");
         for (Course course : courses) {
@@ -266,7 +264,6 @@ public class SchoolManagementSystem {
     }
 }
 
-// Supporting Classes
 
 class User {
     private final String username;
