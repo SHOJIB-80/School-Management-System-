@@ -1,13 +1,27 @@
-public class Teacher extends Person {
+public class Teacher {
+    private String name;
     private String subject;
 
     public Teacher(String name, String subject) {
-        super(name);
+        this.name = name;
         this.subject = subject;
     }
 
     @Override
-    public String getDetails() {
-        return "Teacher{name='" + getName() + "', subject='" + subject + "'}";
+    public String toString() {
+        return name + "," + subject;
+    }
+
+    public static Teacher fromString(String data) {
+        String[] parts = data.split(",");
+        return new Teacher(parts[0], parts[1]);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSubject() {
+        return subject;
     }
 }

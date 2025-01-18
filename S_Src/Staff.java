@@ -1,6 +1,3 @@
-
-
-
 public class Staff {
     private String name;
     private String position;
@@ -38,13 +35,15 @@ public class Staff {
         this.department = department;
     }
 
-    // toString method for display
+    // Convert Staff object to string
     @Override
     public String toString() {
-        return "Staff{" +
-                "name='" + name + '\'' +
-                ", position='" + position + '\'' +
-                ", department='" + department + '\'' +
-                '}';
+        return name + "," + position + "," + department;
+    }
+
+    // Create Staff object from string
+    public static Staff fromString(String data) {
+        String[] parts = data.split(",");
+        return new Staff(parts[0], parts[1], parts[2]);
     }
 }

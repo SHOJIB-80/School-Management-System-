@@ -1,18 +1,22 @@
-public abstract class Person {
-    private String name;
+public class Person {
+    protected String name;
+    protected String role;
 
-    public Person(String name) {
+    public Person(String name, String role) {
         this.name = name;
+        this.role = role;
     }
 
     public String getName() {
         return name;
     }
 
-    public abstract String getDetails();
+    public String getRole() {
+        return role;
+    }
 
     @Override
     public String toString() {
-        return getDetails();
+        return "Person{name='" + name + "', role='" + role + "'}";
     }
 }
