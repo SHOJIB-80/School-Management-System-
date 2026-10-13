@@ -245,7 +245,7 @@ This project does not implement a hardened security model. The current implement
 
 ## License
 
-This repository does not currently include a `LICENSE` file, so no explicit license is defined for the project.
+License under SHOJIB-80
 
 ## Author
 
